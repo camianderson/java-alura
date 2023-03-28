@@ -20,11 +20,18 @@ public class App {
         // select only the data we want (title, poster, rating)
         var parser = new JsonParser();
         List<Map<String, String>> listaDeFilmes = parser.parse(body);
-        for (Map<String,String> filme: listaDeFilmes) {
-            System.out.println(filme.get("title"));
-            System.out.println(filme.get("image"));
-            System.out.println(filme.get("imDbRating"));
-            System.out.println();
+        for (Map<String,String> movie: listaDeFilmes) {
+            System.out.println("\u001b[1mTitle:\u001b[m " + movie.get("title"));
+            System.out.println("\u001b[1mPoster URL:\u001b[m " + movie.get("image"));
+            System.out.println("\u001b[1mRating:\u001b[m " + movie.get("imDbRating"));
+            double rating = Double.parseDouble(movie.get("imDbRating"));
+            int starNumber = (int) rating;
+            for(int n = 1; n <= starNumber; n++){
+                System.out.print("🌟");
+            }
+
+            System.out.println("\n");
+
         }
     
     }
