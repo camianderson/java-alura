@@ -28,4 +28,8 @@ public class StickerGenerator {
         ImageIO.write(newImg, "png", new File("exit/sticker.png"));
     }
 
+    public static void main(String[] args) throws Exception {
+        var creator = new StickerGenerator();
+        creator.generate();
+    }
 }
