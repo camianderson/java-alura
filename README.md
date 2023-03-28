@@ -1,18 +1,28 @@
-## Getting Started
+# Consuming a movie API with Java
+by [Cami Anderson](https://github.com/camianderson).
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
 
-## Folder Structure
+## Table of Contents
+  - [Introduction](#introduction)
+  - [Technologies](#technologies)
+  - [Illustrations](#illustrations)
+  - [Sources](#sources)
 
-The workspace contains two folders by default, where:
+## Introduction
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+ In this project I built an application from scratch, using Java, to consume a movie API and display the most popular movies, highlighting their posters and visualizing their rating... All without using any external libraries!
+ It was my first project coding in Java and understanding and applying Java concepts in a real project.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Technologies
+  - Java
+  
+## Illustrations
 
-## Dependency Management
+![gif](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDU4MDExOTYxNWFiODYwOTNhYjliNjY5YWVhYmE4MzdiZTM2NjBkYSZjdD1n/8H6pOhlvXauFsC6S1k/giphy.gif)
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Sources
+  - [MDN](http://developer.mozilla.org/en-US/)
+  - [W3Schools](https://www.w3schools.com/)
+  - [Regular Expresions 101](https://regex101.com/)
+  - [Alura](https://www.alura.com.br/)
