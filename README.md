@@ -5,6 +5,7 @@ by [Cami Anderson](https://github.com/camianderson).
 ## Table of Contents
   - [Introduction](#introduction)
   - [Technologies](#technologies)
+  - [Illustrations](#illustrations)
   - [Sources](#sources)
 
 ## Introduction
@@ -15,6 +16,10 @@ by [Cami Anderson](https://github.com/camianderson).
 
 ## Technologies
   - Java
+  
+## Illustrations
+
+![gif](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDU4MDExOTYxNWFiODYwOTNhYjliNjY5YWVhYmE4MzdiZTM2NjBkYSZjdD1n/8H6pOhlvXauFsC6S1k/giphy.gif)
 
 ## Sources
   - [MDN](http://developer.mozilla.org/en-US/)
