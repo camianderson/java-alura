@@ -21,6 +21,7 @@ public class App {
         var parser = new JsonParser();
         List<Map<String, String>> listaDeFilmes = parser.parse(body);
         for (Map<String,String> movie: listaDeFilmes) {
+            System.out.println("\u001b[1m\u001b[40mRank: " + movie.get("rank") + " \u001b[m");
             System.out.println("\u001b[1mTitle:\u001b[m " + movie.get("title"));
             System.out.println("\u001b[1mPoster URL:\u001b[m " + movie.get("image"));
             System.out.println("\u001b[1mRating:\u001b[m " + movie.get("imDbRating"));
