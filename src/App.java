@@ -16,11 +16,16 @@ public class App {
         var request = HttpRequest.newBuilder(address).GET().build();
         HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
         String body = response.body();
-        System.out.println(body);
 
         // select only the data we want (title, poster, rating)
         var parser = new JsonParser();
         List<Map<String, String>> listaDeFilmes = parser.parse(body);
+        for (Map<String,String> filme: listaDeFilmes) {
+            System.out.println(filme.get("title"));
+            System.out.println(filme.get("image"));
+            System.out.println(filme.get("imDbRating"));
+            System.out.println();
+        }
     
     }
 }
