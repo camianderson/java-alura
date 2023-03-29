@@ -1,6 +1,8 @@
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.awt.Color;
+import java.awt.Font;
 
 import javax.imageio.ImageIO;
 
@@ -14,15 +16,20 @@ public class StickerGenerator {
         //create the new image in the memory with transparency and new size
         int width = originalImg.getWidth();
         int height = originalImg.getHeight();
-        int newHeight = height + 200;
+        int newHeight = height + 100;
         BufferedImage newImg = new BufferedImage(width, newHeight, BufferedImage.TRANSLUCENT);
 
         //copy the original image to the new image (in the memory)
         Graphics2D graphics = (Graphics2D) newImg.getGraphics();
         graphics.drawImage(originalImg,  0, 0, null);
 
+        //add font details to image
+        var font = new Font(Font.SANS_SERIF, Font.BOLD, 64);
+        graphics.setColor(Color.YELLOW);
+        graphics.setFont(font);
+
         //write something in the image
-        
+        graphics.drawString("AWESOME", 180, newHeight-25);
 
         //write the new image in a file
         ImageIO.write(newImg, "png", new File("exit/sticker.png"));
