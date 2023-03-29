@@ -33,7 +33,7 @@ public class StickerGenerator {
         graphics.drawString("AWESOME", 180, newHeight-25);
 
         //write the new image in a file
-        ImageIO.write(newImg, "png", new File(nameFile));
+        ImageIO.write(newImg, "png", new File("exit/" + nameFile));
     }
 
 }
