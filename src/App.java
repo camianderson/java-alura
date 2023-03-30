@@ -7,13 +7,14 @@ public class App {
 
         // call the API to get the data (response body) and get top movies
         // String url = "https://raw.githubusercontent.com/alura-cursos/imersao-java-2-api/main/TopMovies.json";
-        String url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2022-06-12&end_date=2022-06-14";
-        
-       var http = new ClientHttp();
-       String json = http.dataSearch(url);
+        // ContentExtractor extractor = new MoviesContentExtractor();
 
-        // show and manipulate data
-        NasaContentExtractor extractor = new NasaContentExtractor();
+        String url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2022-06-12&end_date=2022-06-14";
+        ContentExtractor extractor = new NasaContentExtractor();
+        
+        var http = new ClientHttp();
+        String json = http.dataSearch(url);
+
         List<Content> allContent = extractor.extractContent(json);
        
         var generator = new StickerGenerator();
