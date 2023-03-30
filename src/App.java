@@ -1,7 +1,6 @@
 import java.io.InputStream;
 import java.net.URL;
 import java.util.List;
-import java.util.Map;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -13,17 +12,22 @@ public class App {
        var http = new ClientHttp();
        String json = http.dataSearch(url);
 
-        // instatiate the StickerGenerator to create the stickers
-        var parser = new JsonParser();
-        List<Map<String, String>> contentList = parser.parse(json);
-        for (Map<String,String> content: contentList) {
-            InputStream inputStream = new URL(content.get("image")).openStream();
-            String stickerTitle = content.get("title") + ".png";
+        // show and manipulate data
+        NasaContentExtractor extractor = new NasaContentExtractor();
+        List<Content> allContent = extractor.extractContent(json);
+       
+        var generator = new StickerGenerator();
 
-            var generator = new StickerGenerator();
+        for(int i = 0; i < 3; i++){
+
+            Content content = allContent.get(i);
+            
+            InputStream inputStream = new URL(content.getUrlImage()).openStream();
+            String stickerTitle = content.getTitle() + ".png";
+
             generator.generate(inputStream, stickerTitle);
 
-            System.out.println("\u001b[1mTitle:\u001b[m " + content.get("title"));
+            System.out.println("\u001b[1mTitle:\u001b[m " + content.getTitle());
             System.out.println();
 
         }
